@@ -11,7 +11,7 @@ For an example, see the [JavaScript **`test.js`**](#tests)..
 ## Introduction
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
-It's about arrays (of 'any' type) without really nesting them,
+It's about arrays (of **any** type) without really nesting them,
 but access with multi-dimensional coordinates. These coordinates
 will be calculated, similar to **radix/base conversions**.
 
