@@ -5,20 +5,8 @@
  */
 
 //
-import func from './field.func.js';
-
-//
-class Field
-{
-	constructor(... _args)
-	{
-		//
-		//TODO/
-		//
-	}
-}
-
-export default Field;
+const func = {};
+export default func;
 
 //
 
