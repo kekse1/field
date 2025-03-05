@@ -14,15 +14,13 @@ class Field
 {
 	constructor(... _args)
 	{
-		this.bigint = DEFAULT_BIGINT;
-		this.array = null;
-		this.coord = [];
+		this.reset();
 
 		for(var i = 0, j = 0; i < _args.length; ++i)
 		{
 			if(typeof _args[i] === 'number')
 			{
-				this.coord[j++] = _args.splice(i--, 1)[0];
+				this.dimensions[j++] = _args.splice(i--, 1)[0];
 			}
 			else if(lib.isArrayType(_args[i]))
 			{
@@ -33,6 +31,13 @@ class Field
 				this.bigint = _args.splice(i--, 1)[0];
 			}
 		}
+	}
+
+	reset()
+	{
+		this.bigint = DEFAULT_BIGINT;
+		this.array = null;
+		this.dimensions = [];
 	}
 
 	setArray(_value)
@@ -57,27 +62,35 @@ class Field
 		return result;
 	}
 
-	resetCoord()
+	resetDimensions()
 	{
-		const result = this.coord.length;
-		this.coord = [];
+		const result = this.dimensions.length;
+		this.dimensions = [];
 		return result;
 	}
 
-	setCoord(... _coord)
+	setDimensions(... _dimensions)
 	{
-		const result = this.coord.length;
-		this.coord = _coord;
+		const result = this.dimensions.length;
+		this.dimensions = [ ... _dimensions ];
 		return result;
 	}
 
-	addCoord(... _coord)
+	addDimension(... _dimensions)
 	{
-		this.coord.push(... _coord);
-		return this.coord.length;
+		this.dimensions.push(... _dimensions);
+		return this.dimensions.length;
 	}
 
-	/*getOffset(... _coord)
+	static getOffset(_coordinates, _dimensions)
+	{
+	}
+
+	static getCoordinates(_offset, _dimensions)
+	{
+	}
+
+	getOffset(... _coordinates)
 	{
 		var result;
 
@@ -94,14 +107,14 @@ class Field
 		return result;
 	}
 
-	getCoord(_offset)
+	getCoordinates(_offset)
 	{
 		var result;
 
 		//
 		//todo/
 		//
-	}*/
+	}
 }
 
 export default Field;
