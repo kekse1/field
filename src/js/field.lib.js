@@ -5,8 +5,8 @@
  */
 
 //
-const func = {};
-export default func;
+const lib = {};
+export default lib;
 
 //
 
