@@ -9,4 +9,15 @@ const lib = {};
 export default lib;
 
 //
+lib.isArrayType = (_item) => {
+	try
+	{
+		return _item.constructor.name.endsWith('Array');
+	}
+	catch(_error)
+	{
+	}
+
+	return false;
+};
 
