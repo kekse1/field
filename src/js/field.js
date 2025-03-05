@@ -64,14 +64,14 @@ class Field
 
 	resetDimensions()
 	{
-		const result = this.dimensions.length;
+		const result = this.dimensions;
 		this.dimensions = [];
 		return result;
 	}
 
 	setDimensions(... _dimensions)
 	{
-		const result = this.dimensions.length;
+		const result = this.dimensions;
 		this.dimensions = [ ... _dimensions ];
 		return result;
 	}
@@ -79,7 +79,12 @@ class Field
 	addDimension(... _dimensions)
 	{
 		this.dimensions.push(... _dimensions);
-		return this.dimensions.length;
+		return [ ... this.dimensions ];
+	}
+
+	getDimensions()
+	{
+		return [ ... this.dimensions ];
 	}
 
 	static getOffset(_coordinates, _dimensions)
