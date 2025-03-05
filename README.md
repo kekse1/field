@@ -6,6 +6,8 @@ The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
 
+For an example, see the [JavaScript **`test.js`**](src/js/test.js).
+
 ## Introduction
 This is the best[tm] way to manage multi-dimensional data.
 
@@ -19,6 +21,10 @@ directly the concrete data (if you've set an array before).
 ## Download
 * [JavaScript](src/js/field.js)
 * [Bash Shell](src/sh/field.sh)
+
+### Test(s)
+* [JavaScript](src/js/test.js)
+* [Bash Shell](src/sh/test.sh)
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
