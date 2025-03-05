@@ -1,6 +1,6 @@
 ([Back to the **README**](../README.md))
 
-# **Bash Shell** version
+# **JavaScript** implementation
 TODO
 
 ## Modules
