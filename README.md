@@ -1,7 +1,7 @@
 <img src="https://kekse.biz/github.php?draw&override=github:field" />
 
 # Field
-Is currently **under construction**!1
+The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
 
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
