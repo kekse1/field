@@ -96,11 +96,23 @@ class Field
 		var	dim = 1n,
 			coord;
 		
-		for(var i = 0, j = 0, mul = 1n; i < _coordinates.length; ++i)
+		for(var i = 0, j = _coordinates.length - 1, mul = 1n;; --j)
 		{
-			coord = BigInt(_coordinates[i]);
+			coord = BigInt(_coordinates[j]);
 			result += ((mul *= dim) * coord);
-			dim = BigInt(_dimensions[i % _dimensions.length]);
+			dim = BigInt(_dimensions[i]);
+
+			if(j > 0)
+			{
+				if(++i >= _dimensions.length)
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				break;
+			}
 		}
 
 		return result;
@@ -112,7 +124,7 @@ class Field
 		var	rest = BigInt(_offset),
 			index = 0;
 
-		var i = 0, dim = 1n; do
+		for(var i = 0, dim = 1n;;)
 		{
 			result[index++] = Number(rest % dim);
 			rest /= dim;
@@ -120,16 +132,20 @@ class Field
 
 			if(rest >= 1n)
 			{
-				i = ((i + 1) % _dimensions.length);
+				if(++i >= _dimensions.length)
+				{
+					i = 0;
+				}
 			}
 			else
 			{
 				break;
 			}
 		}
-		while(true);
 
-		result.shift();
+		result.reverse();
+		result.pop();
+
 		return result;
 	}
 
