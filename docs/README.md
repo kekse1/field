@@ -1,6 +1,6 @@
 ([Back to the **README**](../README.md))
 
-# `getopt` documentation
+# `Field` documentation
 This is my way to handle **multi-dimensional** data.
 
 It's about arrays (of 'any' type) without really nesting them,
