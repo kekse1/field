@@ -6,7 +6,8 @@
 ## Introduction
 This is the best[tm] way to manage multi-dimensional data.
 
-My current plan is a JavaScript and a `bash` shell script implementation.
+> [!NOTE]
+> My current plan is a JavaScript and a `bash` shell script implementation.
 
 ## //TODO/..
 
