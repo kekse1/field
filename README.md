@@ -3,7 +3,7 @@
 # Field
 The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
 For an example see the [JavaScript **`test.js`**](#tests). But have not yet
-finished much tests (TODO).
+finished much tests (TODO). Maybe there's still a tiny mistake..
 
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
