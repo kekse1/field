@@ -7,6 +7,3 @@ TODO
 * [Field](./field.md)
 * [Library](./lib.md)
 
-## TODO
-See the [TODO](./todo.md).
-
