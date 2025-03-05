@@ -9,7 +9,7 @@ The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
 For an example, see the [JavaScript **`test.js`**](#tests)..
 
 ## Introduction
-This is the best[tm] way to manage multi-dimensional data.
+This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
 It's about arrays (of 'any' type) without really nesting them,
 but access with multi-dimensional coordinates. These coordinates
