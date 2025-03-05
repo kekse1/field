@@ -1,4 +1,4 @@
-([Back to the **Index**](./doc.md))
+([Back to the **Index**](./README.md))
 
 # Library
 Some helper functions, etc.
