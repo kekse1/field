@@ -13,10 +13,13 @@ This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
 It's about arrays (of **any type**) without really nesting them,
 but access with multi-dimensional coordinates. These coordinates
-will be calculated, similar to **radix/base conversions**.
+are calculated, similar to **radix/base conversions**. That's also
+the reason why you even can use any `TypedArray` which doesn't
+really support nesting 'em.
 
 You can either use the dimensions and/or calculated offsets, or
-directly the concrete data (if you've set an array before).
+directly the concrete data (if you've set an array before). In both
+directions, so calculation of offsets and also coordinates.
 
 ## Download
 * [JavaScript](src/js/field.js)
