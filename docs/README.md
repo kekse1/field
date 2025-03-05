@@ -1,6 +1,6 @@
 ([Back to the **README**](../README.md))
 
-# `Field` documentation
+# `getopt` documentation
 This is my way to handle **multi-dimensional** data.
 
 It's about arrays (of 'any' type) without really nesting them,
@@ -10,10 +10,6 @@ will be calculated, similar to radix/base conversions.
 You can either use the dimensions and/or calculated offsets, or
 directly the concrete data (if you've set an array before).
 
-## Modules
-* [Field](./doc.field.md)
-* [Library](./doc.lib.md)
-
-## TODO
-See the [TODO](./todo.md).
-
+## Implementations
+* [**JavaScript**](./js/) version
+* [**Bash Shell**](./bash/) version
