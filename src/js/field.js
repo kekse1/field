@@ -5,7 +5,7 @@
  */
 
 //
-import lib from './field.lib.js';
+import lib from './field.library.js';
 
 //
 class Field

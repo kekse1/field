@@ -11,6 +11,6 @@ You can either use the dimensions and/or calculated offsets, or
 directly the concrete data (if you've set an array before).
 
 ## Implementations
-* [**JavaScript**](./js/) version
-* [**Bash Shell**](./bash/) version
+* [**JavaScript**](./js/) implementation
+* [**Bash Shell**](./bash/) implementation
 

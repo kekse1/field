@@ -5,5 +5,5 @@ TODO
 
 ## Modules
 * [Field](./field.md)
-* [Library](./lib.md)
+* [Library](./library.md)
 
