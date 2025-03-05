@@ -1,1 +1,1 @@
-../src/bash/test.sh
+../src/sh/test.sh
