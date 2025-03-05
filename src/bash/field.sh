@@ -8,5 +8,4 @@ real="$(realpath "$0")"
 dir="$(dirname "$real")"
 
 #
-source "${dir}/field.library.sh" || exit 127
 

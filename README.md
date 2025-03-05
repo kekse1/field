@@ -3,16 +3,22 @@
 # Field
 Is currently **under construction**!1
 
-## Introduction
-This is the best[tm] way to manage multi-dimensional data.
-
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
 
-Just take a look at the [documentation](./docs/).
+## Introduction
+This is the best[tm] way to manage multi-dimensional data.
 
-## TODO
-...
+It's about arrays (of 'any' type) without really nesting them,
+but access with multi-dimensional coordinates. These coordinates
+will be calculated, similar to **radix/base conversions**.
+
+You can either use the dimensions and/or calculated offsets, or
+directly the concrete data (if you've set an array before).
+
+## Download
+* [JavaScript](src/js/field.js)
+* [Bash Shell](src/sh/field.sh)
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
