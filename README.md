@@ -9,7 +9,10 @@ This is the best[tm] way to manage multi-dimensional data.
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
 
-## //TODO/..
+Just take a look at the [documentation](./docs/).
+
+## TODO
+...
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
