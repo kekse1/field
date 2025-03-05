@@ -86,29 +86,13 @@ class Field
 
 	static getOffset(_coordinates, _dimensions)
 	{
-		_dimensions = [ 1, ... _dimensions ];
 		var result = 0n;
 		
-		var dim, coord; for(var i = 0, j = 0, mul = 1n;;)
+		var dim = 1n, coord; for(var i = 0, j = 0, mul = 1n; i < _coordinates.length; ++i)
 		{
 			coord = BigInt(_coordinates[i]);
-
-			if(!(dim = BigInt(_dimensions[i % _dimensions.length])))
-			{
-				continue;
-			}
-			
 			result += ((mul *= dim) * coord);
-
-			if(i < (_coordinates.length - 1))
-			{
-				j = ((j + 1) % _dimensions.length);
-				++i;
-			}
-			else
-			{
-				break;
-			}
+			dim = BigInt(_dimensions[i % _dimensions.length]);
 		}
 
 		return result;
@@ -116,9 +100,28 @@ class Field
 
 	static getCoordinates(_offset, _dimensions)
 	{
-		_dimensions = [ 1, ... _dimensions ];
 		const result = [];
-throw new Error('TODO');
+		var rest = BigInt(_offset), index = 0;
+
+		var i = 0, dim = 1n; do
+		{
+			result[index++] = Number(rest % dim);
+			rest /= dim;
+			dim = BigInt(_dimensions[i]);
+
+			if(rest >= 1n)
+			{
+				i = ((i + 1) % _dimensions.length);
+			}
+			else
+			{
+				break;
+			}
+		}
+		while(true);
+
+		result.shift();
+		return result;
 	}
 
 	addOffset(... _coordinates)
