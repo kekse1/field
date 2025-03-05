@@ -19,7 +19,7 @@ class Field
 			{
 				this.dimensions[j++] = _args.splice(i--, 1)[0];
 			}
-			else if(Field.isArrayType(_args[i]))
+			else if(isArrayType(_args[i]))
 			{
 				this.array = _args.splice(i--, 1)[0];
 			}
@@ -28,19 +28,6 @@ class Field
 				this.bigint = _args.splice(i--, 1)[0];
 			}
 		}
-	}
-
-	static isArrayType(_value)
-	{
-		try
-		{
-			return _value.constructor.name.endsWith('Array');
-		}
-		catch(_err)
-		{
-		}
-
-		return false;
 	}
 
 	reset()
@@ -57,7 +44,7 @@ class Field
 			return this.unsetArray();
 		}
 
-		if(!Field.isArrayType(_value))
+		if(!isArrayType(_value))
 		{
 			throw new Error('Value is not an instance of any type of Array.');
 		}
@@ -133,6 +120,16 @@ class Field
 }
 
 export default Field;
+
+//
+const isArrayType = (_item) => {
+	try
+	{
+		return _item.constructor.name.endsWith('Array');
+	}
+	catch(_err) {}
+	return false;
+};
 
 //
 
