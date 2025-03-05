@@ -4,9 +4,6 @@
  */
 
 //
-const DEFAULT_BIGINT = true;
-
-//
 class Field
 {
 	constructor(... _args)
@@ -23,18 +20,21 @@ class Field
 			{
 				this.array = _args.splice(i--, 1)[0];
 			}
-			else if(typeof _args[i] === 'boolean')
-			{
-				this.bigint = _args.splice(i--, 1)[0];
-			}
 		}
 	}
 
 	reset()
 	{
-		this.bigint = DEFAULT_BIGINT;
 		this.array = null;
 		this.dimensions = [];
+		this.offset = 0n;
+	}
+
+	resetOffset()
+	{
+		const result = this.offset;
+		this.offset = 0n;
+		return result;
 	}
 
 	setArray(_value)
@@ -54,7 +54,7 @@ class Field
 
 	unsetArray()
 	{
-		const result = !!this.array;
+		const result = this.array;
 		this.array = null;
 		return result;
 	}
@@ -73,7 +73,7 @@ class Field
 		return result;
 	}
 
-	addDimension(... _dimensions)
+	addDimensions(... _dimensions)
 	{
 		this.dimensions.push(... _dimensions);
 		return [ ... this.dimensions ];
@@ -86,24 +86,60 @@ class Field
 
 	static getOffset(_coordinates, _dimensions)
 	{
+		_dimensions = [ 1, ... _dimensions ];
+		var result = 0n;
+		
+		var dim, coord; for(var i = 0, j = 0, mul = 1n;;)
+		{
+			coord = BigInt(_coordinates[i]);
+
+			if(!(dim = BigInt(_dimensions[i % _dimensions.length])))
+			{
+				continue;
+			}
+			
+			result += ((mul *= dim) * coord);
+
+			if(i < (_coordinates.length - 1))
+			{
+				j = ((j + 1) % _dimensions.length);
+				++i;
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		return result;
 	}
 
 	static getCoordinates(_offset, _dimensions)
 	{
+		_dimensions = [ 1, ... _dimensions ];
+		const result = [];
+throw new Error('TODO');
+	}
+
+	addOffset(... _coordinates)
+	{
+		return this.offset += Field.getOffset(
+			_coordinates,
+			this.dimensions);
 	}
 
 	getOffset(... _coordinates)
 	{
-		var result;
+		const result = Field.getOffset(
+			_coordinates,
+			this.dimensions);
 
-		//
-		//todo/
-		//
-
-		//
 		if(this.array)
 		{
-			result %= this.array.length;
+			return getIndex(Number(
+				result % BigInt(
+					this.array.length)),
+				this.array.length);
 		}
 		
 		return result;
@@ -111,11 +147,51 @@ class Field
 
 	getCoordinates(_offset)
 	{
-		var result;
+		return Field.getCoordinates(
+			_offset,
+			this.dimensions);
+	}
 
-		//
-		//todo/
-		//
+	add(... _coordinates)
+	{
+		const result = this.addOffset(... _coordinates);
+
+		if(this.array)
+		{
+			return this.array[offset];
+		}
+
+		return result;
+	}
+
+	get(... _coordinates)
+	{
+		const result = this.getOffset(... _coordinates);
+
+		if(this.array)
+		{
+			return this.array[result];
+		}
+
+		return result;
+	}
+
+	set(_value, ... _coordinates)
+	{
+		var result;
+		const offset = this.getOffset(... _coordinates);
+
+		if(this.array)
+		{
+			result = this.array[offset];
+			this.array[offset] = _value;
+		}
+		else
+		{
+			result = offset;
+		}
+
+		return result;
 	}
 }
 
@@ -123,12 +199,22 @@ export default Field;
 
 //
 const isArrayType = (_item) => {
-	try
+	try { return _item.constructor.name.endsWith('Array'); }
+	catch(_err) {} return false;
+};
+
+const getIndex = (_index, _length) => {
+	if(_length < 1)
 	{
-		return _item.constructor.name.endsWith('Array');
+		return null;
 	}
-	catch(_err) {}
-	return false;
+
+	if((_index %= _length) < 0)
+	{
+		_index = (_length + _index);
+	}
+
+	return _index;
 };
 
 //
