@@ -156,8 +156,7 @@ class Field
 
 		while(rest > 0n)
 		{
-			result.push(Number(
-				rest % dim));
+			result.push(Number(rest % dim));
 			rest /= dim;
 			dim = BigInt(_dimensions[index++ %
 				_dimensions.length]);
