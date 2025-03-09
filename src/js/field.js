@@ -22,10 +22,10 @@ class Field
 			}
 		}
 
-		this.check();
+		this.checkDimensions();
 	}
 
-	check()
+	checkDimensions()
 	{
 		for(var i = this.dimensions.length - 1; i >= 0; --i)
 		{
