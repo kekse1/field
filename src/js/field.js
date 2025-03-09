@@ -163,7 +163,15 @@ class Field
 				_dimensions.length]);
 		}
 
-		result.shift();
+		if(result.length === 0)
+		{
+			result[0] = 0;
+		}
+		else
+		{
+			result.shift();
+		}
+
 		return result;
 	}
 
