@@ -2,11 +2,11 @@
 
 # Field
 The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
-For an example see the [JavaScript **`test.js`**](#tests). But have not yet
-finished much tests (TODO). Maybe there's still a tiny mistake..
+For an example see the [JavaScript **`test.js`**](#tests).
 
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
+> JavaScript version is ready now, btw.. the rest is still TODO!
 
 ## Introduction
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).

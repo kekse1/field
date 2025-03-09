@@ -9,11 +9,13 @@ import Field from './field.js';
 
 //
 const field = new Field(256, 128, 64);
+console.dir({ dimensions: field.dimensions,
+	size: field.size });
 
 //
-const offset1 = field.getOffset(255, 255, 255, 255);
-const offset2 = field.getOffset(16, 32, 64, 128);
-console.dir({coords1:[255,255,255,255],coords2:[16,32,64,128],
+const offset1 = field.getOffset(255,127,63);
+const offset2 = field.getOffset(1, 2, 3);
+console.dir({coords1:[255,127,63],coords2:[1,2,3],
 	offset1,offset2});
 
 //

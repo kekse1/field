@@ -9,6 +9,8 @@ import Field from './field.js';
 
 //
 const field = new Field(256);
+console.dir({ dimensions: field.dimensions,
+	size: field.size });
 
 //
 const offset1 = field.getOffset(255, 255, 255, 255);

@@ -23,6 +23,28 @@ class Field
 		}
 	}
 
+	get size()
+	{
+		var result = 1n;
+
+		for(var i = 0, mul = 1n; i < this.dimensions.length; ++i)
+		{
+			result *= BigInt(this.dimensions[i]);
+		}
+
+		return result;
+	}
+	
+	get length()
+	{
+		if(this.array)
+		{
+			return this.array.length;
+		}
+
+		return 0;
+	}
+
 	reset()
 	{
 		this.array = null;
@@ -96,23 +118,12 @@ class Field
 		var	dim = 1n,
 			coord;
 		
-		for(var i = 0, j = _coordinates.length - 1, mul = 1n;; --j)
+		for(var i = 0, mul = 1n; i < _coordinates.length; ++i)
 		{
-			coord = BigInt(_coordinates[j]);
+			coord = BigInt(_coordinates[i]);
 			result += ((mul *= dim) * coord);
-			dim = BigInt(_dimensions[i]);
-
-			if(j > 0)
-			{
-				if(++i >= _dimensions.length)
-				{
-					i = 0;
-				}
-			}
-			else
-			{
-				break;
-			}
+			dim = BigInt(_dimensions[i %
+				_dimensions.length]);
 		}
 
 		return result;
@@ -122,30 +133,18 @@ class Field
 	{
 		const	result = [];
 		var	rest = BigInt(_offset),
-			index = 0;
+			index = 0, dim = 1n;
 
-		for(var i = 0, dim = 1n;;)
+		while(rest > 0n)
 		{
-			result[index++] = Number(rest % dim);
+			result.push(Number(
+				rest % dim));
 			rest /= dim;
-			dim = BigInt(_dimensions[i]);
-
-			if(rest >= 1n)
-			{
-				if(++i >= _dimensions.length)
-				{
-					i = 0;
-				}
-			}
-			else
-			{
-				break;
-			}
+			dim = BigInt(_dimensions[index++ %
+				_dimensions.length]);
 		}
 
-		result.reverse();
-		result.pop();
-
+		result.shift();
 		return result;
 	}
 
