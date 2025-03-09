@@ -13,8 +13,11 @@ console.dir({ dimensions: field.dimensions,
 	size: field.size });
 
 //
-for(var i = 0; i <= 16; ++i)
+var coord, offset; for(var i = 0; i <= 16; ++i)
 {
-	console.dir({i, coord: field.getCoordinates(i)});
+	coord = field.getCoordinates(i);
+	offset = field.getOffset(... coord);
+
+	console.dir({i, coord, offset});
 }
 
