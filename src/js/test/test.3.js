@@ -8,13 +8,19 @@
 import Field from '../field.js';
 
 //
-const field = new Field(2);
+const field = new Field(256);
 console.dir({ dimensions: field.dimensions,
 	size: field.size });
 
 //
-for(var i = 0; i <= 16; ++i)
-{
-	console.dir({i, coord: field.getCoordinates(i)});
-}
+const offset1 = field.getOffset(255, 255, 255, 255);
+const offset2 = field.getOffset(16, 32, 64, 128);
+console.dir({coords1:[255,255,255,255],coords2:[16,32,64,128],
+	offset1,offset2});
+
+//
+const coords1 = field.getCoordinates(offset1);
+const coords2 = field.getCoordinates(offset2);
+console.dir({offset1,offset2,
+	coords1,coords2});
 
