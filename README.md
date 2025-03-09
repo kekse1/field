@@ -1,12 +1,11 @@
 <img src="https://kekse.biz/github.php?draw&override=github:field" />
 
 # Field
-The [JavaScript](src/js/field.js) implementation is nearly(..) ready right now.
-For an example see the [JavaScript **`test.js`**](#tests).
+The [JavaScript](src/js/field.js) implementation is ready right now.
+For an example see the [JavaScript **tests**](#tests).
 
 > [!NOTE]
 > My current plan is a JavaScript and a `bash` shell script implementation.
-> JavaScript version is ready now, btw.. the rest is still TODO!
 
 ## Introduction
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
