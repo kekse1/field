@@ -14,8 +14,8 @@ console.dir({ dimensions: field.dimensions,
 
 //
 const offset1 = field.getOffset(255, 255, 255, 255);
-const offset2 = field.getOffset(16, 32, 64, 128);
-console.dir({coords1:[255,255,255,255],coords2:[16,32,64,128],
+const offset2 = field.getOffset(255, 255);
+console.dir({coords1:[255,255,255,255],coords2:[255,255],
 	offset1,offset2});
 
 //
