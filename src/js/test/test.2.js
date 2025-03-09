@@ -5,7 +5,7 @@
  */
 
 //
-import Field from './field.js';
+import Field from '../field.js';
 
 //
 const field = new Field(256, 128, 64);

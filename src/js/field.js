@@ -21,6 +21,25 @@ class Field
 				this.array = _args.splice(i--, 1)[0];
 			}
 		}
+
+		this.check();
+	}
+
+	check()
+	{
+		for(var i = this.dimensions.length - 1; i >= 0; --i)
+		{
+			if(!this.dimensions[i])
+			{
+				this.dimensions.splice(i, 1);
+			}
+			else if(typeof this.dimensions[i] !== 'number')
+			{
+				this.dimensions.splice(i, 1);
+			}
+		}
+
+		return (this.dimensions.length > 0);
 	}
 
 	get size()
