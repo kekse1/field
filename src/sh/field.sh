@@ -4,8 +4,15 @@
 #
 
 #
-real="$(realpath "$0")"
-dir="$(dirname "$real")"
+getOffset()
+{
+}
 
-#
+getCoordinates()
+{
+}
+
+fieldSize()
+{
+}
 
