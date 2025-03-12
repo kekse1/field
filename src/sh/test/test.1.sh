@@ -14,6 +14,6 @@ dir="$(dirname "$real")"
 for (( i=0; i<=16; ++i )); do
 	coord="$(coordinates $i 2)"
 	offset="$(offset $coord 2)"
-	printf "[%2s] %2s => %s\n" "$i" "$offset" "$coord"
+	printf "[%2s]\t%2s  <=  %s\n" "$i" "$offset" "$coord"
 done
 

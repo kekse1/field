@@ -63,17 +63,15 @@ coordinates()
 	local result=""
 	local rest=$offset
 	local dims=${#dimensions[@]}
-	local count=0
 
 	while [[ $rest -gt 0 ]]; do
 		result="${result},$(($rest%$dim))"
 		rest=$(($rest/$dim))
 		dim=${dimensions[$(($index%$dims))]}
 		index=$(($index+1))
-		count=$(($count+1))
 	done
 
-	if [[ $count -eq 0 ]]; then
+	if [[ $index -eq 0 ]]; then
 		result="0"
 	else
 		result="${result: 1}"
