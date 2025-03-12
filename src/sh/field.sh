@@ -17,11 +17,10 @@ offset()
 {
 	local coordinates="$1"
 	local dimensions="$2"
-
 	IFS=','
 	read -ra coordinates <<<"$coordinates"
 	read -ra dimensions <<<"$dimensions"
-
+	
 	local i
 	local dim=1
 	local mul=1
@@ -43,8 +42,8 @@ offset()
 coordinates()
 {
 	local offset=$1
-	local dimensions=$2
-	IFS=',' read -ra dimensions <<<"$dimensions"
+	local dimensions=$2; IFS=',' read -ra dimensions <<<"$dimensions"
+
 	local dim=1
 	local index=0
 	local result=""
