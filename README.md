@@ -13,9 +13,12 @@ You can either use the dimensions and/or calculated offsets, or
 directly the concrete data (if you've set an array before). In both
 directions, so calculation of offsets and also coordinates.
 
+## News
+* \[**2025-03-12**\] Just finished the `bash` version now, too.
+
 ## Download
-* [JavaScript](src/js/field.js)
-* [Bash Shell](src/sh/field.sh)
+* [JavaScript](src/js/field.js) \[Version v**1.0.0**; Last update: **2025-03-12**\];
+* [Bash Shell](src/sh/field.sh) \[Version v**1.0.0**; Last update: **2025-03-12**\];
 
 > [!NOTE]
 > The JavaScript variant is a bit bigger, and calculates with `BigInt`.

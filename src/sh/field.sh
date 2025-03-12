@@ -1,6 +1,7 @@
 #
 # Copyright (c) Sebastian Kucharczyk <kuchen@kekse.biz>
 # https://kekse.biz/ https://github.com/kekse1/field/
+# v1.0.0
 #
 
 #
@@ -20,7 +21,15 @@ offset()
 	IFS=','
 	read -ra coordinates <<<"$coordinates"
 	read -ra dimensions <<<"$dimensions"
-	
+
+	if [[ ${#dimensions[@]} -eq 0 ]]; then
+		echo "Missing dimensions parameter (second argument, with comma separated values)" >&2
+		return 1
+	elif [[ ${#coordinates[@]} -eq 0 ]]; then
+		echo "0"
+		return
+	fi
+
 	local i
 	local dim=1
 	local mul=1
@@ -43,6 +52,11 @@ coordinates()
 {
 	local offset=$1
 	local dimensions=$2; IFS=',' read -ra dimensions <<<"$dimensions"
+
+	if [[ ${#dimensions[@]} -eq 0 ]]; then
+		echo "Missing dimensions parameter (second argument, with comma separated values)" >&2
+		return 1
+	fi
 
 	local dim=1
 	local index=0
@@ -74,6 +88,11 @@ fieldSize()
 	local result=1
 	local dimensions="$1"
 	IFS=',' read -ra dimensions <<<"$dimensions"
+
+	if [[ ${#dimensions[@]} -eq 0 ]]; then
+		echo "Missing dimensions parameter (with comma separated values)" >&2
+		return 1
+	fi
 
 	for i in "${dimensions[@]}"; do
 		result=$(($result*$i))
