@@ -24,6 +24,11 @@ directions, so calculation of offsets and also coordinates.
 * [JavaScript](src/js/field.js)
 * [Bash Shell](src/sh/field.sh)
 
+Only the `bash` implementation is still TODO. Currently working on it.
+
+> [!NOTE]
+> Only the JavaScript variant works with BigInt.
+
 ### Test(s)
 * [JavaScript](src/js/test/)
 * [Bash Shell](src/sh/test/)
