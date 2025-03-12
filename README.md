@@ -27,7 +27,7 @@ directions, so calculation of offsets and also coordinates.
 * [JavaScript](src/js/test/)
 * [Bash Shell](src/sh/test/)
 
-### Screenshot
+### Example Screenshots
 ![JavaScript](img/javascript.png)
 ![Bash Shell](img/bash.png)
 
