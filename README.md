@@ -28,7 +28,8 @@ directions, so calculation of offsets and also coordinates.
 * [Bash Shell](src/sh/test/)
 
 ### Screenshot
-![Example tests](img/javascript-test.png)
+![JavaScript](img/javascript.png)
+![Bash Shell](img/bash.png)
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
