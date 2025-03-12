@@ -7,6 +7,9 @@
 # Note: both dimensions and coordinates are strings
 # with values separated by comma `,` (*no* spaces);
 #
+# Note: only my JavaScript implementation (which is
+# a bit bigger) supports BigInt.
+#
 
 
 #
@@ -42,8 +45,29 @@ getCoordinates()
 	local offset=$1
 	local dimensions=$2
 	IFS=',' read -ra dimensions <<<"$dimensions"
+	local dim=1
+	local index=0
+	local result=""
+	local rest=$offset
+	local dims=${#dimensions[@]}
+	local count=0
 
-	# todo # ...
+	while [[ $rest -gt 0 ]]; do
+		result="${result},$(($rest%$dim))"
+		rest=$(($rest/$dim))
+		dim=${dimensions[$(($index%$dims))]}
+		index=$(($index+1))
+		count=$(($count+1))
+	done
+
+	if [[ $count -eq 0 ]]; then
+		result="0"
+	else
+		result="${result: 1}"
+		result="${result#*,}"
+	fi
+
+	echo "$result"
 }
 
 fieldSize()
@@ -54,7 +78,6 @@ fieldSize()
 
 	for i in "${dimensions[@]}"; do
 		result=$(($result*$i))
-		echo "($i)"
 	done
 
 	echo $result

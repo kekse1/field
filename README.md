@@ -1,13 +1,6 @@
 <img src="https://kekse.biz/github.php?draw&override=github:field" />
 
 # Field
-The [JavaScript](src/js/field.js) implementation is ready right now.
-For an example see the [JavaScript **tests**](#tests).
-
-> [!NOTE]
-> My current plan is a JavaScript and a `bash` shell script implementation.
-
-## Introduction
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
 It's about arrays (of **any type**) without really nesting them,
@@ -24,10 +17,8 @@ directions, so calculation of offsets and also coordinates.
 * [JavaScript](src/js/field.js)
 * [Bash Shell](src/sh/field.sh)
 
-Only the `bash` implementation is still TODO. Currently working on it.
-
 > [!NOTE]
-> Only the JavaScript variant works with BigInt.
+> The JavaScript variant is a bit bigger, and calculates with `BigInt`.
 
 ### Test(s)
 * [JavaScript](src/js/test/)
