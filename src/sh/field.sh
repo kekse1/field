@@ -13,7 +13,7 @@
 
 
 #
-getOffset()
+offset()
 {
 	local coordinates="$1"
 	local dimensions="$2"
@@ -40,7 +40,7 @@ getOffset()
 	echo $result
 }
 
-getCoordinates()
+coordinates()
 {
 	local offset=$1
 	local dimensions=$2

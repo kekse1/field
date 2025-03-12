@@ -11,7 +11,7 @@ dir="$(dirname "$real")"
 . "${dir}/../field.sh"
 
 #
-getOffset 255,255 256
-getCoordinates 65535 256
+offset 255,255 256
+coordinates 65535 256
 fieldSize 256,256,256
 
