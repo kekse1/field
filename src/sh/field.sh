@@ -23,7 +23,7 @@ offset()
 	read -ra dimensions <<<"$dimensions"
 
 	if [[ ${#dimensions[@]} -eq 0 ]]; then
-		echo "Missing dimensions parameter (second argument, with comma separated values)" >&2
+		echo "Missing dimensions parameter (second argument, with comma separated integers)" >&2
 		return 1
 	elif [[ ${#coordinates[@]} -eq 0 ]]; then
 		echo "0"
@@ -54,7 +54,7 @@ coordinates()
 	local dimensions=$2; IFS=',' read -ra dimensions <<<"$dimensions"
 
 	if [[ ${#dimensions[@]} -eq 0 ]]; then
-		echo "Missing dimensions parameter (second argument, with comma separated values)" >&2
+		echo "Missing dimensions parameter (second argument, with comma separated integers)" >&2
 		return 1
 	fi
 
@@ -90,7 +90,7 @@ fieldSize()
 	IFS=',' read -ra dimensions <<<"$dimensions"
 
 	if [[ ${#dimensions[@]} -eq 0 ]]; then
-		echo "Missing dimensions parameter (with comma separated values)" >&2
+		echo "Missing dimensions parameter (with comma separated integers)" >&2
 		return 1
 	fi
 
