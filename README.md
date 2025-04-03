@@ -1,5 +1,7 @@
 <img src="https://kekse.biz/github.php?draw&override=github:field" />
 
+<br>
+
 # Field
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
@@ -13,8 +15,12 @@ You can either use the dimensions and/or calculated offsets, or
 directly the concrete data (if you've set an array before). In both
 directions, so calculation of offsets and also coordinates.
 
+<br><br>
+
 ## News
 * \[**2025-03-12**\] Just finished the `bash` version now, too.
+
+<br>
 
 ## Download
 * [JavaScript](src/js/field.js) \[Version v**1.0.0**; Last update: **2025-03-12**\];
@@ -23,13 +29,19 @@ directions, so calculation of offsets and also coordinates.
 > [!NOTE]
 > The JavaScript variant is a bit bigger, and calculates with `BigInt`.
 
+<br>
+
 ### Test(s)
 * [JavaScript](src/js/test/)
 * [Bash Shell](src/sh/test/)
 
+<br>
+
 ### Example Screenshots
 ![JavaScript](img/javascript.png)
 ![Bash Shell](img/bash.png)
+
+<br>
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
