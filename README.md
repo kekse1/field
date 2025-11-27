@@ -2,7 +2,7 @@
 
 <br>
 
-# Field
+# `Field`
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
 It's about arrays (of **any type**) without really nesting them,
@@ -42,7 +42,7 @@ directions, so calculation of offsets and also coordinates.
 
 ### Tipp
 For more radix/base/unit/.. conversion and numeric JavaScript extensions
-see also my **[`radix`](https://github.com/kekse1/radix/) repository**!
+see also my **[`Radix`](https://github.com/kekse1/radix/) repository**!
 
 <br><br>
 
