@@ -42,7 +42,7 @@ directions, so calculation of offsets and also coordinates.
 
 ### Tipp
 For more radix/base/unit/.. conversion and numeric JavaScript extensions
-see also my **[`radix.js`](https://github.com/kekse1/radix.js/) repository**!
+see also my **[`radix`](https://github.com/kekse1/radix/) repository**!
 
 <br><br>
 
