@@ -38,9 +38,9 @@ directions, so calculation of offsets and also coordinates.
 ![JavaScript](img/javascript.png)
 ![Bash Shell](img/bash.png)
 
-<br>
+<br><br>
 
-### Tip
+## Related
 For more radix/base/unit/.. conversion and numeric JavaScript extensions
 see also my **[`Radix`](https://github.com/kekse1/radix/) repository**!
 
