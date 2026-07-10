@@ -1,9 +1,9 @@
 <img src="https://kekse.biz/github.php?draw&override=github:field" />
 
-<br>
-
 # `Field`
 This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
+
+<br>
 
 It's about arrays (of **any type**) without really nesting them,
 but access with multi-dimensional coordinates. These coordinates
@@ -15,7 +15,7 @@ You can either use the dimensions and/or calculated offsets, or
 directly the concrete data (if you've set an array before). In both
 directions, so calculation of offsets and also coordinates.
 
-<br>
+<br><br>
 
 ## Download
 * [JavaScript](src/js/field.js) \[Version v**1.0.0**; Last update: **2025-03-12**\];
@@ -44,10 +44,12 @@ directions, so calculation of offsets and also coordinates.
 For more radix/base/unit/.. conversion and numeric JavaScript extensions
 see also my **[`Radix`](https://github.com/kekse1/radix/) repository**!
 
-<br><br>
+<br><br><br>
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:field&draw&text=field@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
+
+<br>
 
 # Copyright and License
 The Copyright is [(c) Sebastian Kucharczyk](./COPYRIGHT.txt),
