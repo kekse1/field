@@ -8,7 +8,7 @@ This is the best[tm] way to manage multi-dimensional arrays (of **any type**).
 
 It's about arrays (of **any type**) without really nesting them,
 but access with multi-dimensional coordinates. These coordinates
-are calculated, similar to **radix/base conversions**. That's also
+are calculated, similar to **base conversions**. That's also
 the reason why you even can use any `TypedArray` which doesn't
 really support nesting 'em.
 
